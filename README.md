@@ -1,2 +1,2 @@
 # gacha-game
-Open distribution
+Open distributor
