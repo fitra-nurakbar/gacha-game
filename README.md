@@ -1,0 +1,2 @@
+# gacha-game
+Open distribution
