@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gacha - Game</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="script.js" defer></script>
-</head>
-<body>
-  <div class="container">
-    <h1 class="title">Gacha game rate 10%</h1>
-    <div class="card-container">
-      <div id="cards" class="cards"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gacha - Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Gacha game rate 10%</h1>
+      <div class="card-container">
+        <div id="cards" class="cards"></div>
+      </div>
+      <div class="controller">
+        <label for="count" class="label">10x</label>
+        <input type="checkbox" id="count" name="count" class="checkbox" />
+        <button type="submit" class="button">Summons</button>
+      </div>
+      <button class="floating-button" onclick="closeGacha()">Close</button>
     </div>
-    <div class="controller">
-      <label for="count" class="label">10x</label>
-      <input type="checkbox" id="count" name="count" class="checkbox">
-      <button type="submit" class="button">Summons</button>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

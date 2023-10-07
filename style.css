@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,22 +92,35 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 body {
   line-height: 1;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
   content: none;
 }
 table {
@@ -55,7 +136,7 @@ table {
 .container {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+  background-image: linear-gradient(140deg, #ffcf96, #f6fdc3, #cdfad5);
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
@@ -63,10 +144,10 @@ table {
 }
 .container > h1 {
   text-transform: uppercase;
-  color: #fefefe;
+  color: #ff8080;
   font-weight: bold;
   font-size: 2.5em;
-  text-shadow: .1em 0 0 #cfcfcf;
+  text-shadow: 0.1em 0 0 #c26464;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -75,7 +156,7 @@ table {
   visibility: hidden;
   position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   display: flex;
@@ -90,7 +171,7 @@ table {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row-reverse;
-  gap: .5em;
+  gap: 0.5em;
   user-select: none;
 }
 .card {
@@ -99,7 +180,9 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-radius: 0.5em;
   transition: 0.2s ease-in-out;
   border: 0.1em solid currentColor;
@@ -126,23 +209,38 @@ table {
   color: green;
 }
 .gold {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* controller */
 .controller {
   display: flex;
   align-items: center;
-  gap: .5em;
+  gap: 0.5em;
 }
 .controller > button {
-  background-color: red;
-  padding: .5em 1em;
+  background-color: #ff8080;
+  padding: 0.5em 1em;
   color: white;
   font-weight: bold;
   border-radius: 20px;
   cursor: pointer;
   border: none;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #ff8080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  visibility: hidden;
 }
 
 @keyframes slideIn {
@@ -155,4 +253,3 @@ table {
     opacity: 1;
   }
 }
-
