@@ -4,6 +4,7 @@ const cards = document.querySelector("#cards");
 const cardContainer = document.querySelector(".card-container");
 const card = document.querySelectorAll(".card");
 const floatingButton = document.querySelector(".floating-button");
+const editableNumber = document.getElementById('myEditableNumber');
 const MAX_AMOUNT = 10;
 
 function generateRandomNumberWithRate(rate) {
@@ -18,7 +19,9 @@ function removeCardElementsWithDelay(parentElement, delay) {
 }
 
 function createCardElement() {
-  const getGacha = generateRandomNumberWithRate(10);
+  const newValue = editableNumber.textContent;
+  const rateNumber = parseInt(newValue);
+  const getGacha = generateRandomNumberWithRate(rateNumber);
   cardContainer.style.visibility = "visible";
   const newCard = document.createElement("div");
   const colorClass = getGacha ? "gold" : "basic";
@@ -60,3 +63,16 @@ function closeGacha() {
   floatingButton.style.visibility = "hidden";
   removeCardElementsWithDelay(cards, 500);
 }
+
+editableNumber.addEventListener('blur', () => {
+  const newValue = editableNumber.textContent;
+  const numberValue = parseInt(newValue);
+
+  if (!isNaN(numberValue) && numberValue >= 0 && numberValue <= 100) {
+    button.disabled = false;
+  } else {
+    editableNumber.textContent = 'Masukkan angka antara 0-100';
+    button.disabled = true;
+  }
+});
+
